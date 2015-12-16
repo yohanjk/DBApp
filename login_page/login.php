@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Written by YOHAN-->
-<html>
+<html  manifest="cache.appcache">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>OneClick Taxi: Log In</title>
