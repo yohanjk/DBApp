@@ -74,11 +74,11 @@
                                 <div class="tab-content">
                                     <div id="add_new" class="tab-pane fade in active">
                                         <h5>Add new device details</h5>
-                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="adddrivers.php">
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="device-id">Driver NIC:</label>
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="device_id" placeholder="Driver NIC">
+                                                    <input type="text" class="form-control" name="d_nic" placeholder="Driver NIC">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -94,9 +94,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="license_no">License No:</label>
+                                                <label class="control-label col-sm-2" for="licence_no">License No:</label>
                                                 <div class="col-sm-5">
-                                                    <input type="text" class="form-control" name="license_no" placeholder="License No">
+                                                    <input type="text" class="form-control" name="licence_no" placeholder="License No">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -115,11 +115,11 @@
                                     <div id="update" class="tab-pane fade">
                                         <h5>Update existing device details</h5>
 
-                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="updatedrivers.php">
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="device-id">Driver NIC:</label>
                                                 <div class="col-sm-1">
-                                                    <select class="form-control" id="sel1">
+                                                    <select class="form-control" name="sel1">
                                                         <option> </option>
                                                         <?php
                                                             include('DBCon.php');
@@ -146,7 +146,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="license_no">License No:</label>
                                                 <div class="col-sm-5">
-                                                    <input type="text" class="form-control" name="license_no" placeholder="License No">
+                                                    <input type="text" class="form-control" name="licence_no" placeholder="License No">
                                                 </div>
                                             </div>
                                             <div class="form-group">
