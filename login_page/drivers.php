@@ -50,8 +50,8 @@
                                 <li><a href="./emb_devices.php">Emb. Devices</a></li>
                                 <li class="active"><a href="">Drivers</a></li>
                                 <li><a href="./vehicles.php">Vehicles</a></li>
-                                <li><a href="#">Packages</a></li>
-                                <li><a href="#">Resevation</a></li>
+                                <li><a href="./packages.php">Packages</a></li>
+                                <li><a href="./reservation.php">Reservation</a></li>
                             </ul>
 
                             <!---------Content------->
@@ -160,8 +160,61 @@
                                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                     </div>
                                 </div>
-
-
+                                <div id="update" class="tab-pane fade">
+                                  <h5>Update existing device details</h5>
+                                    
+                                    <form class="form-horizontal" role="form" method="post" action="#">
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
+                                            <div class="col-sm-2">
+                                                <select class="form-control" id="sel1">
+                                                    <?php
+                                                        include('DBCon.php');
+                                                        $result = mysqli_query($con,"SELECT d_nic FROM driver") or die(mysqli_error($link));
+                                                        $row = mysqli_fetch_assoc($result);
+                                                        while ($row){
+                                                            echo '<option>'.$row['d_nic'].'</option>';
+                                                        }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="f_name">First Name:</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="f_name" placeholder="First Name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="l_name">Last Name:</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="l_name" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="licence_no">Licence No:</label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="licence_no" placeholder="Licence No">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="address">Address:</label>
+                                            <div class="col-sm-4">
+                                                <textarea type="date" class="form-control" rows="2" id="address" placeholder="Address"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-default">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                  
+                                  </div>
+                                <div id="view" class="tab-pane fade">
+                                  <h5>Driver Details</h5>
+                                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                              </div>
                             </div>
                         </div>
                     </div>
