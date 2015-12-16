@@ -1,7 +1,7 @@
 
        <?php
        
- //nimash commit
+ //nimash commited
 /*
 www.dbprojectg5.net16.net
 
