@@ -117,9 +117,14 @@
                                                 <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
                                                 <div class="col-sm-2">
                                                     <select class="form-control" id="sel1">
-                                                        <option>DriverID1</option>
-                                                        <option>DriverID2</option>
-                                                        <option>DriverID3</option>
+                                                        <option> </option>
+                                                        <?php
+                                                            include('DBCon.php');
+                                                            $result = mysqli_query($con,"SELECT d_nic FROM driver");
+                                                            while ($row = mysqli_fetch_array($result)){
+                                                                echo '<option>'.$row['d_nic'].'</option>';
+                                                            }
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>

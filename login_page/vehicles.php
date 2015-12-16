@@ -111,7 +111,7 @@
                                                                 echo '<option>'.$row['reg_number'].'</option>';
                                                             }
                                                         ?>
-                                                    </select>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
