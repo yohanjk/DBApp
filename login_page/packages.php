@@ -47,19 +47,19 @@
                         <! web page middle >
                         <div id="button-pannel">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                                <li><a data-toggle="tab" href="#home">Home</a></li>
                                 <li><a href="./emb_devices.php">Emb. Devices</a></li>
                                 <li><a href="./drivers.php">Drivers</a></li>
                                 <li><a href="./vehicles.php">Vehicles</a></li>
-                                <li><a href="./packages.php">Packages</a></li>
+                                <li class="active"><a href="">Packages</a></li>
                                 <li><a href="./reservation.php">Reservation</a></li>
                             </ul>
 
                             <!---------Menu Content------->
                             <div class="tab-content">
                                 <div id="home" class="tab-pane fade in active">
-                                    <h3>HOME</h3>
-                                    <p>Welcome to OneClic Taxi Service officer home page</p>
+                                    <h3>Packages</h3>
+                                    <p>Package details</p>
                                 </div>
                             </div>
                         </div>
