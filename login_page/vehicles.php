@@ -42,8 +42,8 @@
                                 <li><a href="./emb_devices.php">Emb. Devices</a></li>
                                 <li><a href="./drivers.php">Drivers</a></li>
                                 <li class="active"><a href="">Vehicles</a></li>
-                                <li><a href="./packages.php">Packages</a></li>
-                                <li><a href="./reservation.php">Reservation</a></li>
+                                <li><a href="#">Packages</a></li>
+                                <li><a href="#">Resevation</a></li>
                             </ul>
                             
                             <!---------Content------->
@@ -96,11 +96,11 @@
                                     </form>
                                 </div>
                                 <div id="update" class="tab-pane fade">
-                                  <h5>Update existing device details</h5>
+                                  <h5>Update existind device details</h5>
                                     
                                     <form class="form-horizontal" role="form" method="post" action="#">
                                         <div class="form-group">
-                                            <label class="control-label col-sm-2" for="reg_num">Registration No:</label>
+                                            <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
                                             <div class="col-sm-2">
                                                 <select class="form-control" id="sel1">
                                                         <option> </option>
@@ -115,22 +115,27 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-sm-2" for="type_id">Type ID:</label>
-                                            <div class="col-sm-1">
-                                                <input type="text" class="form-control" id="type_id">
+                                            <label class="control-label col-sm-2" for="f_name">First Name:</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="f_name" placeholder="First Name">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-sm-2" for="seats">No of Seats:</label>
-                                            <div class="col-sm-1">
-                                                <input type="text" class="form-control" id="seats">
+                                            <label class="control-label col-sm-2" for="l_name">Last Name:</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="l_name" placeholder="Last Name">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="col-sm-offset-2 col-sm-10">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" id="ac">With AC</label>
-                                                </div>
+                                            <label class="control-label col-sm-2" for="licence_no">Licence No:</label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" id="licence_no" placeholder="Licence No">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="address">Address:</label>
+                                            <div class="col-sm-4">
+                                                <textarea type="date" class="form-control" rows="2" id="address" placeholder="Address"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -142,7 +147,7 @@
                                   
                                   </div>
                                 <div id="view" class="tab-pane fade">
-                                  <h5>Vehicle Details</h5>
+                                  <h5>Driver Details</h5>
                                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                               </div>
                             </div>

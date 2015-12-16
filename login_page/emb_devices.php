@@ -51,8 +51,8 @@
                                 <li class="active"><a href="">Emb. Devices</a></li>
                                 <li><a href="./drivers.php">Drivers</a></li>
                                 <li><a href="./vehicles.php">Vehicles</a></li>
-                                <li><a href="./packages.php">Packages</a></li>
-                                <li><a href="./reservation.php">Reservation</a></li>
+                                <li><a href="#">Packages</a></li>
+                                <li><a href="#">Resevation</a></li>
                             </ul>
 
                             <!---------Content------->
@@ -114,7 +114,7 @@
                                         </form>
                                     </div>
                                     <div id="update" class="tab-pane fade">
-                                        <h5>Update existing device details</h5>
+                                        <h5>Update existind device details</h5>
 
                                         <form class="form-horizontal" role="form" method="post" action="update_emb_device.php">
                                             <div class="form-group">
@@ -133,7 +133,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="discription">description:</label>
+                                                <label class="control-label col-sm-2" for="discription">Discription:</label>
                                                 <div class="col-sm-5">
                                                     <input type="text" class="form-control" name="discription" placeholder="Discription">
                                                 </div>
