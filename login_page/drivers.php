@@ -172,7 +172,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
                                             <div class="col-sm-2">
-                                                <select class="form-control" id="sel1">
+                                                <select class="form-control" name="sel1">
                                                     <option> </option>
                                                     <?php
                                                         include('DBCon.php');
@@ -188,25 +188,25 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="f_name">First Name:</label>
                                             <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="f_name" placeholder="First Name">
+                                                <input type="text" class="form-control" name="f_name" placeholder="First Name">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="l_name">Last Name:</label>
                                             <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="l_name" placeholder="Last Name">
+                                                <input type="text" class="form-control" name="l_name" placeholder="Last Name">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="licence_no">Licence No:</label>
                                             <div class="col-sm-4">
-                                                <input type="text" class="form-control" id="licence_no" placeholder="Licence No">
+                                                <input type="text" class="form-control" name="licence_no" placeholder="Licence No">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="address">Address:</label>
                                             <div class="col-sm-4">
-                                                <textarea type="date" class="form-control" rows="2" id="address" placeholder="Address"></textarea>
+                                                <input type="date" class="form-control" rows="2" name="address" placeholder="Address"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
