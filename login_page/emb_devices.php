@@ -120,7 +120,16 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="device-id">Device ID:</label>
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                    <select class="form-control" id="sel1">
+                                                        <option> </option>
+                                                        <?php
+                                                            include('DBCon.php');
+                                                            $result = mysqli_query($con,"SELECT device_id FROM device");
+                                                            while ($row = mysqli_fetch_array($result)){
+                                                                echo '<option>'.$row['device_id'].'</option>';
+                                                            }
+                                                        ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
