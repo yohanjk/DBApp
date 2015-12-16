@@ -57,6 +57,8 @@
                                 <li class="active"><a data-toggle="pill" href="#add_new">Add New</a></li>
                                 <li><a data-toggle="pill" href="#update">Update</a></li>
                                 <li><a data-toggle="pill" href="#view">View Details</a></li>
+                                <li><a data-toggle="pill" href="#add_vehicle_type">Add Vehicle Type</a></li>
+                                <li><a data-toggle="pill" href="#vehicle_types">Vehicle Types</a></li>
                               </ul>
 
                               <div class="tab-content">
@@ -72,7 +74,16 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="type_id">Type ID:</label>
                                             <div class="col-sm-1">
-                                                <input type="text" class="form-control" id="type_id">
+                                                <select class="form-control" id="sel1">
+                                                        <option> </option>
+                                                        <?php
+                                                            include('DBCon.php');
+                                                            $result = mysqli_query($con,"SELECT type_id,detail FROM vehicle_type");
+                                                            while ($row = mysqli_fetch_array($result)){
+                                                                echo '<option>'.$row['type_id'].'</option>';
+                                                            }
+                                                        ?>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -117,7 +128,16 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="type_id">Type ID:</label>
                                             <div class="col-sm-1">
-                                                <input type="text" class="form-control" id="type_id">
+                                                <select class="form-control" id="sel1">
+                                                        <option> </option>
+                                                        <?php
+                                                            include('DBCon.php');
+                                                            $result = mysqli_query($con,"SELECT type_id FROM vehicle_type");
+                                                            while ($row = mysqli_fetch_array($result)){
+                                                                echo '<option>'.$row['type_id'].'</option>';
+                                                            }
+                                                        ?>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -144,7 +164,54 @@
                                 <div id="view" class="tab-pane fade">
                                   <h5>Driver Details</h5>
                                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                              </div>
+                                </div>
+                                <div id="add_vehicle_type" class="tab-pane fade in active">
+                                    <h5>Add new vehicle type</h5>
+                                    <form class="form-horizontal" role="form" method="post" action="#">
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="type_id">Type ID:</label>
+                                            <div class="col-sm-1">
+                                                <input type="text" class="form-control" id="type_id" placeholder="ID">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="detail">Detail:</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="detail">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-default">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="vehicle_types" class="tab-pane fade in active">
+                                    <h5>Current Vehicle Types</h5>
+                                    <div class="col-sm-5">
+                                        <table class="table table-hover">
+                                            <thead>                                              </tr>
+
+                                              <tr>
+                                                <th>Type ID</th>
+                                                <th>Detail</th>
+                                            </thead>
+                                            <tbody>
+                                                <?php
+                                                    include('DBCon.php');
+                                                    $result = mysqli_query($con,"SELECT * FROM vehicle_type");
+                                                    while ($row = mysqli_fetch_array($result)){
+                                                        echo '<tr>';
+                                                        echo '<td>'.$row['type_id'].'</td>';
+                                                        echo '<td>'.$row['detail'].'</td>';
+                                                        echo '</tr>';
+                                                    }
+                                                ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                             
                             
