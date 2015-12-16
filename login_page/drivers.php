@@ -3,7 +3,7 @@
 <html manifest="cache.appcache">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>OneClick Taxi: Emb. Devices</title>
+        <title>OneClick Taxi: Home</title>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/basic.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -18,6 +18,7 @@
             $msg = "";
         }
         ?>
+
         <div id="page">
             <header id="header"> 
                 <div id="header-inner">
@@ -50,15 +51,17 @@
                                 <li><a href="./emb_devices.php">Emb. Devices</a></li>
                                 <li class="active"><a href="">Drivers</a></li>
                                 <li><a href="./vehicles.php">Vehicles</a></li>
-                                <li><a href="./packages.php">Packages</a></li>
-                                <li><a href="./reservation.php">Reservation</a></li>
+                                <li><a href="#">Packages</a></li>
+                                <li><a href="#">Resevation</a></li>
                             </ul>
 
                             <!---------Content------->
                             <div class="content">
-                                <h3>Driver Details</h3>
-                                <p>Details about taxi drivers can be add, update or view.</p>
+                                <h3>Embedded Devices</h3>
+                                <p>Details about Embedded Devices can be add, update or view.</p>
+                                <!-------Error Message-------->
                                 <div id="error_massege"><?php echo $msg ?></div>
+                                <br>
                             </div>
 
                             <div class="container">
@@ -70,12 +73,12 @@
 
                                 <div class="tab-content">
                                     <div id="add_new" class="tab-pane fade in active">
-                                        <h5>Add new taxi driver details</h5>
-                                        <form class="form-horizontal" role="form" method="post" action="adddrivers.php">
+                                        <h5>Add new device details</h5>
+                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
+                                                <label class="control-label col-sm-2" for="device-id">Driver NIC:</label>
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="d_nic" placeholder="NIC">
+                                                    <input type="text" class="form-control" name="device_id" placeholder="Driver NIC">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -91,15 +94,15 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="licence_no">Licence No:</label>
-                                                <div class="col-sm-4">
-                                                    <input type="text" class="form-control" name="licence_no" placeholder="Licence No">
+                                                <label class="control-label col-sm-2" for="license_no">License No:</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" name="license_no" placeholder="License No">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="address">Address:</label>
-                                                <div class="col-sm-4">
-                                                    <input type="date" class="form-control" rows="2" name="address" placeholder="Address"></textarea>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" name="address" placeholder="Address">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -110,12 +113,12 @@
                                         </form>
                                     </div>
                                     <div id="update" class="tab-pane fade">
-                                        <h5>Update existind device details</h5>
+                                        <h5>Update existing device details</h5>
 
-                                        <form class="form-horizontal" role="form" method="post" action="#">
+                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
-                                                <div class="col-sm-2">
+                                                <label class="control-label col-sm-2" for="device-id">Driver NIC:</label>
+                                                <div class="col-sm-1">
                                                     <select class="form-control" id="sel1">
                                                         <option> </option>
                                                         <?php
@@ -131,25 +134,25 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="f_name">First Name:</label>
                                                 <div class="col-sm-5">
-                                                    <input type="text" class="form-control" id="f_name" placeholder="First Name">
+                                                    <input type="text" class="form-control" name="f_name" placeholder="First Name">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="l_name">Last Name:</label>
                                                 <div class="col-sm-5">
-                                                    <input type="text" class="form-control" id="l_name" placeholder="Last Name">
+                                                    <input type="text" class="form-control" name="l_name" placeholder="Last Name">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="licence_no">Licence No:</label>
-                                                <div class="col-sm-4">
-                                                    <input type="text" class="form-control" id="licence_no" placeholder="Licence No">
+                                                <label class="control-label col-sm-2" for="license_no">License No:</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" name="license_no" placeholder="License No">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="address">Address:</label>
-                                                <div class="col-sm-4">
-                                                    <textarea type="date" class="form-control" rows="2" id="address" placeholder="Address"></textarea>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" name="address" placeholder="Address">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -157,70 +160,15 @@
                                                     <button type="submit" class="btn btn-default">Submit</button>
                                                 </div>
                                             </div>
-                                        </form>
-
+                                        
                                     </div>
                                     <div id="view" class="tab-pane fade">
-                                        <h5>Driver Details</h5>
+                                        <h5>Device Details</h5>
                                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                     </div>
                                 </div>
-                                <div id="update" class="tab-pane fade">
-                                  <h5>Update existing device details</h5>
-                                    
-                                    <form class="form-horizontal" role="form" method="post" action="#">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
-                                            <div class="col-sm-2">
-                                                <select class="form-control" name="sel1">
-                                                    <option> </option>
-                                                    <?php
-                                                        include('DBCon.php');
-                                                        $result = mysqli_query($con,"SELECT d_nic FROM driver");
-                                                        while ($row = mysqli_fetch_array($result)){
-                                                            echo '----------sdb';
-                                                            echo '<option>'.$row['d_nic'].'</option>';
-                                                        }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-2" for="f_name">First Name:</label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="f_name" placeholder="First Name">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-2" for="l_name">Last Name:</label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="l_name" placeholder="Last Name">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-2" for="licence_no">Licence No:</label>
-                                            <div class="col-sm-4">
-                                                <input type="text" class="form-control" name="licence_no" placeholder="Licence No">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-2" for="address">Address:</label>
-                                            <div class="col-sm-4">
-                                                <input type="date" class="form-control" rows="2" name="address" placeholder="Address"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-2 col-sm-10">
-                                                <button type="submit" class="btn btn-default">Submit</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                  
-                                  </div>
-                                <div id="view" class="tab-pane fade">
-                                  <h5>Driver Details</h5>
-                                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                              </div>
+
+
                             </div>
                         </div>
                     </div>
