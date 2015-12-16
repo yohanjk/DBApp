@@ -101,16 +101,21 @@
                                     </form>
                                 </div>
                                 <div id="update" class="tab-pane fade">
-                                  <h5>Update existind device details</h5>
+                                  <h5>Update existing device details</h5>
                                     
                                     <form class="form-horizontal" role="form" method="post" action="#">
                                         <div class="form-group">
                                             <label class="control-label col-sm-2" for="d_nic">Driver NIC:</label>
                                             <div class="col-sm-2">
                                                 <select class="form-control" id="sel1">
-                                                    <option>DriverID1</option>
-                                                    <option>DriverID2</option>
-                                                    <option>DriverID3</option>
+                                                    <?php
+                                                        include('DBCon.php');
+                                                        $result = mysqli_query($con,"SELECT d_nic FROM driver") or die(mysqli_error($link));
+                                                        $row = mysqli_fetch_assoc($result);
+                                                        while ($row){
+                                                            echo '<option>'.$row['d_nic'].'</option>';
+                                                        }
+                                                    ?>
                                                 </select>
                                             </div>
                                         </div>

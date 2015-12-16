@@ -96,7 +96,7 @@
                                     </form>
                                 </div>
                                 <div id="update" class="tab-pane fade">
-                                  <h5>Update existind device details</h5>
+                                  <h5>Update existing device details</h5>
                                     
                                     <form class="form-horizontal" role="form" method="post" action="#">
                                         <div class="form-group">
