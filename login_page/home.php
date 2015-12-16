@@ -49,8 +49,8 @@
                             <ul class="nav nav-tabs">
                                 <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
                                 <li><a href="./emb_devices.php">Emb. Devices</a></li>
-                                <li><a href="#">Drivers</a></li>
-                                <li><a href="#">Vehicles</a></li>
+                                <li><a href="./drivers.php">Drivers</a></li>
+                                <li><a href="./vehicles.php">Vehicles</a></li>
                                 <li><a href="#">Packages</a></li>
                                 <li><a href="#">Resevation</a></li>
                             </ul>

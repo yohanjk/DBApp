@@ -49,8 +49,8 @@
                             <ul class="nav nav-tabs">
                                 <li><a href="./home.php">Home</a></li>
                                 <li class="active"><a href="">Emb. Devices</a></li>
-                                <li><a href="#">Drivers</a></li>
-                                <li><a href="#">Vehicles</a></li>
+                                <li><a href="./drivers.php">Drivers</a></li>
+                                <li><a href="./vehicles.php">Vehicles</a></li>
                                 <li><a href="#">Packages</a></li>
                                 <li><a href="#">Resevation</a></li>
                             </ul>
