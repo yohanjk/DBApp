@@ -4,7 +4,7 @@
     </head>
     <body>
         <?php
-        $did = $_POST['device_id'];
+        $did = $_POST['sel1'];
         $disp = $_POST['discription'];
         $ser = $_POST['onservice'];
         $bdate = $_POST['bought_date'];
