@@ -108,7 +108,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="package-id">Package ID:</label>
                                                 <div class="col-sm-1">
-                                                    <select class="form-control" id="sel1">
+                                                    <select class="form-control" name="package-id">
                                                         <option> </option>
                                                         <?php
                                                             include('DBCon.php');
