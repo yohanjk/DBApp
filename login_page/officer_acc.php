@@ -74,8 +74,9 @@
 
                                 <div class="tab-content">
                                     <div id="add_new" class="tab-pane fade in active">
-                                        <h5>Add new device details</h5>
+                                        <h5>Add new officer</h5>
                                         <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                            <p>Basic Details</p>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="device-id">Device ID:</label>
                                                 <div class="col-sm-1">
@@ -89,10 +90,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <div class="col-sm-offset-2 col-sm-10">
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox" name="onservice"  value="true" unchecked>On Service</label>
-                                                    </div>
+                                                <label class="control-label col-sm-2" for="discription">Description:</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" name="discription" placeholder="Discription">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -107,9 +107,34 @@
                                                     <input type="date" class="form-control" name="end_date" placeholder="End Date">
                                                 </div>
                                             </div>
+                                            <p>Basic Details</p>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
+                                                <div class="col-sm-1">
+                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
+                                                <div class="col-sm-1">
+                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
+                                                <div class="col-sm-1">
+                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                </div>
+                                            </div>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
                                                     <button type="submit" class="btn btn-default">Submit</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
+                                                <div class="col-sm-1">
+                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
                                                 </div>
                                             </div>
                                         </form>
