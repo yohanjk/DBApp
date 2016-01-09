@@ -70,60 +70,73 @@
                                     <li class="active"><a data-toggle="pill" href="#add_new">Add New</a></li>
                                     <li><a data-toggle="pill" href="#update">Update</a></li>
                                     <li><a data-toggle="pill" href="#view">View Details</a></li>
+                                    <li><a data-toggle="pill" href="#view_rank">Rank Details</a></li>
                                 </ul>
 
                                 <div class="tab-content">
                                     <div id="add_new" class="tab-pane fade in active">
                                         <h5>Add new officer</h5>
-                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="add_officer_acc.php">
                                             <p>Basic Details</p>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
-                                                <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                <label class="control-label col-sm-2" for="f_name">First Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="f_name" placeholder="first name">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="discription">Description:</label>
-                                                <div class="col-sm-5">
-                                                    <input type="text" class="form-control" name="discription" placeholder="Discription">
+                                                <label class="control-label col-sm-2" for="l_name">Last Name:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="l_name" placeholder="last name">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="discription">Description:</label>
-                                                <div class="col-sm-5">
-                                                    <input type="text" class="form-control" name="discription" placeholder="Discription">
+                                                <label class="control-label col-sm-2" for="o_nic">NIC:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" name="o_nic" placeholder="NIC number">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="bought_date">Bought Date:</label>
+                                                <label class="control-label col-sm-2" for="address">Address:</label>
                                                 <div class="col-sm-4">
-                                                    <input type="date" class="form-control" name="bought_date" placeholder="Baught Date">
+                                                    <input type="text" class="form-control" name="address" placeholder="Address">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="end_date">End Date:</label>
-                                                <div class="col-sm-4">
-                                                    <input type="date" class="form-control" name="end_date" placeholder="End Date">
+                                                <label class="control-label col-sm-2" for="tel_no">Telephone No:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="tel" class="form-control" name="tel_no" placeholder="telephone">
                                                 </div>
                                             </div>
-                                            <p>Basic Details</p>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
+                                                <label class="control-label col-sm-2" for="rank_id">Rank ID:</label>
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                    <input type="text" class="form-control" name="rank_id" placeholder="Rank">
+                                                </div>
+                                            </div>
+                                            <p>Login Details</p>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="login_name">Login Name:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" name="login_name" placeholder="Login Name">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
-                                                <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                <label class="control-label col-sm-2" for="password">Password:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="password" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
+                                                <label class="control-label col-sm-2" for="re_password">Retype Password:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="re_password" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="pri_level">Privilage Level:</label>
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                    <input type="text" class="form-control" name="pri_level" placeholder="Level">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -132,55 +145,58 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
-                                                <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="device_id" placeholder="ID">
+                                                <label class="control-label col-sm-2" for="admin_password">Enter Administrative Password:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="admin_password" placeholder="Admin">
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                     <div id="update" class="tab-pane fade">
                                         <h5>Update existing device details</h5>
-
-                                        <form class="form-horizontal" role="form" method="post" action="update_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                            <p>Basic Details Changing</p>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="device-id">Device ID:</label>
+                                                <label class="control-label col-sm-2" for="address">Address:</label>
+                                                <div class="col-sm-4">
+                                                    <input type="text" class="form-control" name="address" placeholder="Address">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="tel_no">Telephone No:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="tel" class="form-control" name="tel_no" placeholder="telephone">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="rank_id">Rank ID:</label>
                                                 <div class="col-sm-1">
-                                                    <select class="form-control" id="sel1">
-                                                        <option> </option>
-                                                        <?php
-                                                            include('DBCon.php');
-                                                            $result = mysqli_query($con,"SELECT device_id FROM device");
-                                                            while ($row = mysqli_fetch_array($result)){
-                                                                echo '<option>'.$row['device_id'].'</option>';
-                                                            }
-                                                        ?>
-                                                    </select>
+                                                    <input type="text" class="form-control" name="rank_id" placeholder="Rank">
+                                                </div>
+                                            </div>
+                                            <p>Login Details</p>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="login_name">Login Name:</label>
+                                                <div class="col-sm-2">
+                                                    <input type="text" class="form-control" name="login_name" placeholder="Login Name">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="discription">Discription:</label>
-                                                <div class="col-sm-5">
-                                                    <input type="text" class="form-control" name="discription" placeholder="Discription">
+                                                <label class="control-label col-sm-2" for="password">New Password:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="password" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <div class="col-sm-offset-2 col-sm-10">
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox"  name="onservice">On Service</label>
-                                                    </div>
+                                                <label class="control-label col-sm-2" for="re_password">Retype New Password:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="re_password" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="bought_date">Bought Date:</label>
-                                                <div class="col-sm-4">
-                                                    <input type="date" class="form-control" name="bought_date" placeholder="Baught Date">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2" for="end_date">End Date:</label>
-                                                <div class="col-sm-4">
-                                                    <input type="date" class="form-control" name="end_date" placeholder="End Date">
+                                                <label class="control-label col-sm-2" for="pri_level">Privilage Level:</label>
+                                                <div class="col-sm-1">
+                                                    <input type="text" class="form-control" name="pri_level" placeholder="Level">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -188,16 +204,81 @@
                                                     <button type="submit" class="btn btn-default">Submit</button>
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="admin_password">Enter Administrative Password:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="admin_password" placeholder="Admin">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="old_usr_password">Enter Old User Password:</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" name="old_usr_password" placeholder="Old">
+                                                </div>
+                                            </div>
                                         </form>
-
                                     </div>
                                     <div id="view" class="tab-pane fade">
-                                        <h5>Device Details</h5>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                        <h5>Officer Details</h5>
+                                        <div class="col-sm-5">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>First name</th>
+                                                        <th>Last name</th>
+                                                        <th>NIC</th>
+                                                        <th>Address</th>
+                                                        <th>Rank</th>
+                                                        <th>User Name</th>
+                                                        <th>Privilage Level</th>                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                    include('DBCon.php');
+                                                    $result = mysqli_query($con, "SELECT * FROM officer_rank JOIN officer JOIN officer_login");
+                                                    while ($row = mysqli_fetch_array($result)) {
+                                                        echo '<tr>';
+                                                        echo '<td>' . $row['first_name'] . '</td>';
+                                                        echo '<td>' . $row['last_name'] . '</td>';
+                                                        echo '<td>' . $row['O_NIC'] . '</td>';
+                                                        echo '<td>' . $row['address'] . '</td>';
+                                                        echo '<td>' . $row['rank_name'] . '</td>';
+                                                        echo '<td>' . $row['user_name'] . '</td>';
+                                                        echo '<td>' . $row['priviledge'] . '</td>';
+                                                        echo '</tr>';
+                                                    }
+                                                    ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="view_rank" class="tab-pane fade">
+                                        <h5>Rank Details</h5>
+                                        <div class="col-sm-5">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Rank ID</th>
+                                                        <th>Rank</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                    include('DBCon.php');
+                                                    $result = mysqli_query($con, "SELECT * FROM officer_rank");
+                                                    while ($row = mysqli_fetch_array($result)) {
+                                                        echo '<tr>';
+                                                        echo '<td>' . $row['rank_name'] . '</td>';
+                                                        echo '<td>' . $row['rank_id'] . '</td>';
+                                                        echo '</tr>';
+                                                    }
+                                                    ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
