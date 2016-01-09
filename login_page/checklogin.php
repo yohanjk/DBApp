@@ -1,5 +1,16 @@
 <?php
-
+//define function for encryption
+        define('SALT_LENGTH', 9);
+        function generateHash($plainText, $salt = null){    
+            if ($salt === null){
+                $salt = substr(md5(uniqid(rand(), true)), 0, SALT_LENGTH);
+            }
+            else{
+                $salt = substr($salt, 0, SALT_LENGTH);
+            }    
+            return $salt.sha1($salt.$plainText);
+        }
+        
 $username = $_POST['name'];
 $pw = $_POST['pwd'];
 
@@ -32,8 +43,8 @@ if ($stmt = $con->prepare($query)) {
           echo $pwd;
           } */
         if ($stmt->fetch()) {
-            
-            if ($pwd == $pw) {
+            $encppwd=generateHash($pw,"bud");
+            if ($pwd ==$encppwd ) {
                 header('location: home.php?msg='.$username);
             } else {
                 
