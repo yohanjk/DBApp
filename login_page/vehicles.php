@@ -200,7 +200,29 @@
                                         </form>
                                     </div>
                                     <div id="current_vehicle_type" class="tab-pane fade">
-                                        
+                                        <h5>Vehicle type Details</h5>
+                                        <div class="col-sm-5">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Type ID</th>
+                                                        <th>Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                        include('DBCon.php');
+                                                        $result = mysqli_query($con,"SELECT * FROM vehicle_type");
+                                                        while ($row = mysqli_fetch_array($result)){
+                                                            echo '<tr>';
+                                                            echo '<td>'.$row['type_id'].'</td>';
+                                                            echo '<td>'.$row['detail'].'</td>';
+                                                            echo '</tr>';
+                                                        }
+                                                    ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
