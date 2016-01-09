@@ -69,7 +69,7 @@
                                 <ul class="nav nav-pills">
                                     <li class="active"><a data-toggle="pill" href="#add_new">Add New</a></li>
                                     <li><a data-toggle="pill" href="#update">Update</a></li>
-                                    <li><a data-toggle="pill" href="#view">View Details</a></li>
+                                    <li><a data-toggle="pill" href="#view">Officer Details</a></li>
                                     <li><a data-toggle="pill" href="#view_rank">Rank Details</a></li>
                                 </ul>
 
@@ -109,9 +109,18 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="rank_id">Rank ID:</label>
+                                                <label class="control-label col-sm-2" for="rank_id">Rank ID:</label>                                                
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="rank_id" placeholder="Rank">
+                                                    <select class="form-control" name="rank_id">
+                                                        <option> </option>
+                                                        <?php
+                                                        include('DBCon.php');
+                                                        $result = mysqli_query($con, "SELECT rank_id FROM officer_rank");
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            echo '<option>' . $row['rank_id'] . '</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <p>Login Details</p>
@@ -124,19 +133,19 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="password">Password:</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="password" placeholder="Password">
+                                                    <input type="password" class="form-control" name="password" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="re_password">Retype Password:</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="re_password" placeholder="Password">
+                                                    <input type="password" class="form-control" name="re_password" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="pri_level">Privilage Level:</label>
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="pri_level" placeholder="Level">
+                                                    <input type="number" class="form-control" name="pri_level" placeholder="Level">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -147,7 +156,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="admin_password">Enter Administrative Password:</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="admin_password" placeholder="Admin">
+                                                    <input type="password" class="form-control" name="admin_password" placeholder="Admin">
                                                 </div>
                                             </div>
                                         </form>
@@ -169,9 +178,18 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="rank_id">Rank ID:</label>
+                                                <label class="control-label col-sm-2" for="rank_id">Rank ID:</label>                                                
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" name="rank_id" placeholder="Rank">
+                                                    <select class="form-control" name="rank_id">
+                                                        <option> </option>
+                                                        <?php
+                                                        include('DBCon.php');
+                                                        $result = mysqli_query($con, "SELECT rank_id FROM officer_rank");
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            echo '<option>' . $row['rank_id'] . '</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <p>Login Details</p>
@@ -236,7 +254,7 @@
                                                 <tbody>
                                                     <?php
                                                     include('DBCon.php');
-                                                    $result = mysqli_query($con, "SELECT * FROM officer_rank JOIN officer JOIN officer_login");
+                                                    $result = mysqli_query($con, "SELECT * FROM officer_rank JOIN officer JOIN officer_login WHERE officer.O_NIC=officer_login.O_NIC AND officer_rank.rank_id=officer.rank_id");
                                                     while ($row = mysqli_fetch_array($result)) {
                                                         echo '<tr>';
                                                         echo '<td>' . $row['first_name'] . '</td>';
