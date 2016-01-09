@@ -53,6 +53,7 @@
                                 <li class="active"><a href="#">Vehicles</a></li>
                                 <li><a href="./packages.php">Packages</a></li>
                                 <li><a href="#">Resevation</a></li>
+                                <li><a href="./officer_acc.php">Officer Accounts</a></li>
                             </ul>
 
                             <!---------Content------->
