@@ -202,13 +202,13 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="password">New Password:</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="password" placeholder="Password">
+                                                    <input type="password" class="form-control" name="password" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="re_password">Retype New Password:</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="re_password" placeholder="Password">
+                                                    <input type="password" class="form-control" name="re_password" placeholder="Password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -225,13 +225,13 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="admin_password">Enter Administrative Password:</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="admin_password" placeholder="Admin">
+                                                    <input type="password" class="form-control" name="admin_password" placeholder="Admin">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="old_usr_password">Enter Old User Password:</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" name="old_usr_password" placeholder="Old">
+                                                    <input type="password" class="form-control" name="old_usr_password" placeholder="Old">
                                                 </div>
                                             </div>
                                         </form>
