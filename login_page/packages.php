@@ -104,7 +104,7 @@
                                     <div id="update" class="tab-pane fade">
                                         <h5>Update existing package details</h5>
 
-                                        <form class="form-horizontal" role="form" method="post" action="update_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="updatepackages.php">
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="package-id">Package ID:</label>
                                                 <div class="col-sm-1">
