@@ -166,9 +166,36 @@
                                         </form>
 
                                     </div>
-                                    <div id="view" class="tab-pane fade">
-                                        <h5>Device Details</h5>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                    <div id="view" class="tab-pane fade">                                        
+                                        <h5>View Details</h5>                                        
+                                        <div class="col-sm-5">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Device ID</th>
+                                                        <th>Description</th>
+                                                        <th>On service</th>
+                                                        <th>Bought Date</th>
+                                                        <th>End Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                        include('DBCon.php');
+                                                        $result = mysqli_query($con,"SELECT * FROM device");
+                                                        while ($row = mysqli_fetch_array($result)){
+                                                            echo '<tr>';
+                                                            echo '<td>'.$row['device_id'].'</td>';
+                                                            echo '<td>'.$row['description'].'</td>';
+                                                            echo '<td>'.$row['on_service'].'</td>';
+                                                            echo '<td>'.$row['bought_date'].'</td>';
+                                                            echo '<td>'.$row['end_date'].'</td>';
+                                                            echo '</tr>';
+                                                        }
+                                                    ?>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
 
