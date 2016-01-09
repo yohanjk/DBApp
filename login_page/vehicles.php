@@ -57,8 +57,8 @@
 
                             <!---------Content------->
                             <div class="content">
-                                <h3>Embeded Devices</h3>
-                                <p>Details about Embeded Devices can be add, update or view.</p>
+                                <h3>Vehicle Details</h3>
+                                <p>Details about vehicle, vehicle classes can be add, update or view.</p>
                                 <!-------Error Message-------->
                                 <div id="error_massege"><?php echo $msg ?></div>
                                 <br>
