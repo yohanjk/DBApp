@@ -4,6 +4,9 @@
         <?php
         $tid = $_POST['type_id'];
         $dtl = $_POST['detail'];
+        
+        echo 'type_id'.$tid;
+        echo 'detail'.$dtl;
        
         if ($tid  == '' || $dtl == '') {
             header('location: vehicles.php?msg=Fill all vehicle type data before enter.');
@@ -32,30 +35,27 @@
                 } else {
                     $stmt1->close();
                     // preparing 
-                    $query = "INSERT INTO vehicle _type (type_id,detail) VALUES (?,?)";
-                    if ($stmt = $con->prepare($query)) {
+                    $query2 = "INSERT INTO vehicle_type (type_id,detail) VALUES (?,?)";
+                    if ($stmt2 = $con->prepare($query2)) {
                         //binding
-                        $stmt->bind_param("sssss",$d_nic,$first_name,$last_name,$licence_no,$address);
+                        $stmt2->bind_param("ss",$type_id,$detail);
 
                         // set parameters and execute
-                        $d_nic=$dnic;
-                        $first_name=$fname;
-                        $last_name=$lname;
-                        $licence_no=$lno;
-                        $address=$addr;
+                        $type_id=$tid;
+                        $detail=$dtl;
 
-                        if (!($stmt->execute())) {
+                        if (!($stmt2->execute())) {
                             //createLog(mysql_error());
-                            echo "Error,adddrivers.php,driver not added";
+                            echo "Error,add_vehicle_type.php,vehicle type not added";
                         } else {
-
-                            echo 'driver added';
+                            echo 'vehicle type added';
                             header('location: drivers.php?msg=');
                         }
+                        $stmt2->close();
                     } else {
-                        echo "error checklogin.php preparestatement failure";
+                        echo "error checklogin.php prepare statement failure";
                     }
-                    $stmt->close();
+                    
                 }
 
                 // close statement 
