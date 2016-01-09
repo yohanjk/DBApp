@@ -4,11 +4,11 @@
         <?php
         $rnum = $_POST['reg_num'];
         $type = $_POST['type_id'];
-        $sno = $_POST['seats'];
-        $acchk = $_POST['ac'];
+        $seatno = $_POST['seats'];
+        $acchk = $_POST['with_ac'];
         
-        if ($rnum == '' || $type == '' || $sno == '' || $lno==''||$acchk=='') {
-            header('location: vehicles.php?msg=Fill all input data before submission.');
+        if ($rnum == '' || $type == '' || $seatno == '') {
+            header('location: vehicles.php?msg=Fill all vehicle input data before submission.');
         } else {
 
             include ('.\DBCon.php');
@@ -41,17 +41,21 @@
 
                         // set parameters and execute
                         $reg_number=$rnum;
-                        $with_ac=$aoiewhowhaho;
-                        $type_id;
-                        $seats;
+                        if ($acchk == 'true') {
+                            $with_ac = 1;
+                        } else {
+                             $with_ac= 0;
+                        }
+                        $type_id=$type;
+                        $seats=$seatno;
 
                         if (!($stmt->execute())) {
                             //createLog(mysql_error());
-                            echo "Error,adddrivers.php,driver not added";
+                            echo "Error,addvehicle.php,vehicle not added";
                         } else {
 
-                            echo 'driver added';
-                            header('location: drivers.php?msg=');
+                            echo 'vehicle added';
+                            header('location: vehicles.php?msg=');
                         }
                     } else {
                         echo "error checklogin.php preparestatement failure";
