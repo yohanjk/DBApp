@@ -76,17 +76,17 @@
                                 <div class="tab-content">
                                     <div id="add_new" class="tab-pane fade in active">
                                         <h5>Add new device details</h5>
-                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="addvehicle.php">
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="reg_number">Reg Number:</label>
                                                 <div class="col-sm-2">
-                                                    <input type="text" class="form-control" name="reg_number" placeholder="ID">
+                                                    <input type="text" class="form-control" name="reg_num" placeholder="ID">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="sel1">Type ID:</label>
                                                 <div class="col-sm-1">
-                                                    <select class="form-control" id="sel1">
+                                                    <select class="form-control" name="type_id">
                                                         <option> </option>
                                                         <?php
                                                             include('DBCon.php');
@@ -121,11 +121,11 @@
                                     <div id="update" class="tab-pane fade">
                                         <h5>Update existing device details</h5>
 
-                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="updatevehicle.php">
                                             <div class="form-group">
-                                                <label class="control-label col-sm-2" for="reg_number">Reg Number:</label>
+                                                <label class="control-label col-sm-2" for="reg_num">Reg Number:</label>
                                                 <div class="col-sm-2">
-                                                    <select class="form-control" id="sel1">
+                                                    <select class="form-control" name="reg_num">
                                                         <option> </option>
                                                         <?php
                                                             include('DBCon.php');
@@ -140,7 +140,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="discription">Type ID:</label>
                                                 <div class="col-sm-1">
-                                                    <select class="form-control" id="sel1">
+                                                    <select class="form-control" name="type_id">
                                                         <option> </option>
                                                         <?php
                                                             include('DBCon.php');
@@ -179,17 +179,17 @@
                                     </div>
                                     <div id="new_vehicle_type" class="tab-pane fade">
                                         <h5>Add new vehicle type</h5>
-                                        <form class="form-horizontal" role="form" method="post" action="#">
+                                        <form class="form-horizontal" role="form" method="post" action="add_vehicle_type.php">
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="type_id">Type ID:</label>
                                                 <div class="col-sm-1">
-                                                    <input type="text" class="form-control" id="type_id" placeholder="ID">
+                                                    <input type="text" class="form-control" name="type_id" placeholder="ID">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="detail">Detail:</label>
                                                 <div class="col-sm-5">
-                                                    <input type="text" class="form-control" id="detail">
+                                                    <input type="text" class="form-control" name="detail">
                                                 </div>
                                             </div>
                                             <div class="form-group">
