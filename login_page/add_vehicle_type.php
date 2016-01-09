@@ -12,13 +12,13 @@
             include ('.\DBCon.php');
             //checking peimary key exsistance
 
-            $query1 = "SELECT d_nic FROM driver WHERE d_nic=?";
+            $query1 = "SELECT type_id FROM vehicle_type WHERE type_id=?";
             if ($stmt1 = $con->prepare($query1)) {
                 //binding
-                $stmt1->bind_param("s", $de_nic);
+                $stmt1->bind_param("s", $type_id);
 
                 // set parameters and execute
-                $de_nic = $dnic;
+                $type_id = $tid;
                 $stmt1->execute();
 
                 // store result 
@@ -26,13 +26,13 @@
                 //checking empty result set
                 if (!($stmt1->num_rows == 0)) {
                     $stmt1->close();
-                    echo "driver  already exists";
+                    echo "vehicle _type  already exists";
                     echo "return with label device exist";
-                    header('location: drivers.php?msg=Driver id is already exist.Enter new one.');
+                    header('location: drivers.php?msg=vehicle _type is already exist.Enter new one.');
                 } else {
                     $stmt1->close();
                     // preparing 
-                    $query = "INSERT INTO driver (d_nic,first_name,last_name,licence_no,address,availabilty,on_service) VALUES (?,?,?,?,?,1,1)";
+                    $query = "INSERT INTO vehicle _type (type_id,detail) VALUES (?,?)";
                     if ($stmt = $con->prepare($query)) {
                         //binding
                         $stmt->bind_param("sssss",$d_nic,$first_name,$last_name,$licence_no,$address);
