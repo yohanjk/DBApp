@@ -143,7 +143,7 @@
                                     </div>
                                     <div id="add_new" class="tab-pane fade">
                                         <h5>Add new package details</h5>
-                                        <form class="form-horizontal" role="form" method="post" action="add_emb_device.php">
+                                        <form class="form-horizontal" role="form" method="post" action="addpackages.php">
                                             <div class="form-group">
                                                 <label class="control-label col-sm-2" for="package-id">Device ID:</label>
                                                 <div class="col-sm-1">
