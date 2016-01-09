@@ -57,8 +57,8 @@
 
                             <!---------Content------->
                             <div class="content">
-                                <h3>Embeded Devices</h3>
-                                <p>Details about Embeded Devices can be add, update or view.</p>
+                                <h3>Packages</h3>
+                                <p>Details about Packages can be add, update or view.</p>
                                 <!-------Error Message-------->
                                 <div id="error_massege"><?php echo $msg ?></div>
                                 <br>
